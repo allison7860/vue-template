@@ -57,6 +57,13 @@ export default {
         }
       }
     }
+  },
+  beforeMount() {
+    for ( var x = 0; x < this.pictures.length; x++ ) {
+      if ( this.pictures[x].active == false) {
+        this.pictures[d].active = !this.pictures[d].active;
+      }
+    }
   }
 }
 </script>

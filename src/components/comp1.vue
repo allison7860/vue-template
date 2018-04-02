@@ -28,7 +28,6 @@ export default {
   name: 'comp1',
   data () {
     return {
-      msg: 'hi'
     }
   }
 }

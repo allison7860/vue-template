@@ -27,21 +27,21 @@ export default {
         menuList: [
             {
                 name: 'articles', 
-                sub: [{id: 1, name: 'read', href: 'articles'},
+                sub: [{id: 1, name: 'read', href: '/articles'},
                       {id: 2, name: 'post', href: 'post'}],
                 active:false
              },
             {
                 name: 'about', 
-                sub: [{id: 1, name: 'what is this?', href:'about'}, 
+                sub: [{id: 1, name: 'what is this?', href:'/about'}, 
                       {id: 2, name: 'for you', href:'you'}], 
                       active:false
             },
             {
                 name: 'contact', 
-                sub: [{id: 1, name: 'mail', href: 'contact'},
-                {id: 2, name: 'faq', href: 'faq'}, 
-                {id: 3, name: 'submit', href: 'submit'}], 
+                sub: [{id: 1, name: 'mail', href: '/contact'},
+                {id: 2, name: 'faq', href: '/faq'}, 
+                {id: 3, name: 'submit', href: '/submit'}], 
                 active:false
             },
         ]
