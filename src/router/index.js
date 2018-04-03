@@ -7,7 +7,7 @@ import tag from '@/views/tag'
 import post from '@/views/post'
 import contact from '@/views/contact'
 import single from '@/views/single'
-
+import faq from '@/views/faq'
 
 
 Vue.use(Router)
@@ -52,6 +52,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: contact
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: faq
     }
   ]
 })
