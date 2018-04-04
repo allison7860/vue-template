@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import json from '@/assets/article-date.json'
 export default {
   name: 'single'
 }

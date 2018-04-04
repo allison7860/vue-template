@@ -2,7 +2,7 @@
   <div class="article">
     <div class="sidebar">
       <ul>
-        <li v-for="x in tags">
+        <li v-for="x in json">
           <router-link @click.native="cat(x)" :to="{name: 'tag', params: {tag: x}}">{{x}}</router-link>
         </li>
       </ul>
@@ -28,30 +28,24 @@
 </template>
 
 <script>
+import json from '@/assets/article-date.json'
 export default {
   name: 'articles',
   data () {
     return {
-      pictures: [
-        {id: 1, picture: 'https://78.media.tumblr.com/1bbe4942634bc16f982c143428401ced/tumblr_p2s5quh85Q1s2clnyo1_1280.jpg', header: 'Great Walls of ..', info: 'This picture is the great known halls of Abraham. The scene speaks a lot of riddles of the times of that era. Even though it has been modernized it is still a precious piece. This picture is the great known halls of Abraham. The scene speaks a lot of riddles of the times of that era. Even though it has been modernized it is still a precious piece.', date: '03/31/2017', tags: ['Modern History', 'Ancient History'], active: false},
-        {id: 2, picture: 'https://78.media.tumblr.com/7a7012cb0f79ca37c623add08e5680f2/tumblr_p5afcwlPDM1snegd3o1_1280.jpg', info: 'Hello there', date: '03/31/2017', tags: ['Academic History', 'Points of Views'], active: false},
-        {id: 3, picture: 'https://78.media.tumblr.com/04a4f65fcfc28dfecef77215f9e08235/tumblr_p59rsqRI1Y1ws72bco1_1280.jpg', info: 'Hello there', date: '03/29/2017', tags: ['Opinions', 'Ancient History', 'Modern History'], active: false}
-      ],
-      tags : [
-        'Ancient History', 'Modern History', 'Points of Views', 'Opinions', 'Academic History'
-      ]
+      json: json
     }
   },
   methods: {
     cat: function (x) {
-      for ( var d = 0; d < this.pictures.length; d++ ) {
-          this.pictures[d].active = false;
-        for ( var s = 0; s < this.pictures[d].tags.length; s++ ){
+      for ( var d = 0; d < json.length; d++ ) {
+         json[d].active = false;
+        for ( var s = 0; s < json[d].tags.length; s++ ){
           // Tags inside pictures
 
-          if ( this.pictures[d].tags[s] == x ) {
-            // alert(this.pictures[d])
-            this.pictures[d].active = !this.pictures[d].active;
+          if ( json[d].tags[s] == x ) {
+            // alert(json[d])
+            json[d].active = !json[d].active;
 
           }
         }
@@ -59,9 +53,9 @@ export default {
     }
   },
   beforeMount() {
-    for ( var x = 0; x < this.pictures.length; x++ ) {
-      if ( this.pictures[x].active == false) {
-        this.pictures[x].active = true;
+    for ( var x = 0; x < json.length; x++ ) {
+      if ( json[x].active == false) {
+        json[x].active = true;
       }
     }
   }
