@@ -3,7 +3,7 @@
     <div class="sidebar">
       <ul>
         <li v-for="x in json">
-          <router-link @click.native="cat(x)" :to="{name: 'tag', params: {tag: x}}">{{x}}</router-link>
+          <router-link v-for="s in x.tags" @click.native="cat(s)" :to="{name: 'tag', params: {tag: s}}">{{s}}</router-link>
         </li>
       </ul>
     </div>
@@ -11,15 +11,14 @@
       <div class="article-header">
         <h1 class="header1">Articles</h1>
       </div>
-      
-      <div class="card" v-if="item.active == true" v-for="item in pictures">
-        <p class="header-date">{{item.date}}</p>
-        <div class="photo" v-bind:style="{backgroundImage: 'url(' + item.picture + ')' }">
-          <router-link :to="{name: 'single'}"></router-link>
+      <div class="card" v-for="x in json" v-if="x.active == true">
+        <p class="header-date">{{x.date}}</p>
+        <div class="photo" v-bind:style="{backgroundImage: 'url(' + x.picture + ')' }">
+          <router-link :to="{name: 'single', params: {id: x.id}}"></router-link>
         </div>
         <div class="info">
-          <h3 class="card-header">{{item.header}}</h3>
-          <p>{{item.info}}</p>
+          <h3 class="card-header">{{x.header}}</h3>
+          <p>{{x.info}}</p>
         </div>
       </div>
     </div>
@@ -40,9 +39,8 @@ export default {
     cat: function (x) {
       for ( var d = 0; d < json.length; d++ ) {
          json[d].active = false;
-        for ( var s = 0; s < json[d].tags.length; s++ ){
-          // Tags inside pictures
-
+        for ( var s = 0; s < json[d].tags.length; s++ ) {
+          // Tags inside json data
           if ( json[d].tags[s] == x ) {
             // alert(json[d])
             json[d].active = !json[d].active;
@@ -53,9 +51,18 @@ export default {
     }
   },
   beforeMount() {
+
     for ( var x = 0; x < json.length; x++ ) {
       if ( json[x].active == false) {
         json[x].active = true;
+      }
+      for ( var a = 0; a < json[x].tags.length; a++) {
+        // alert(json[x].tags[a]);
+        if ( json[x].tags[a] == json[x].tags[a]) {
+          // get rid of duplicates here...
+          // alert('duplicate')
+        }
+
       }
     }
   }

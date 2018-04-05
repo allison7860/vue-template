@@ -30,13 +30,13 @@ export default new Router({
           path: 'tag/:tag',
           name: 'tag',
           component: tag,
-        },
-        {
-          path: 'single',
-          name: 'single',
-          component: single,
         }
       ]
+    },
+    {
+      path: 'single/:id',
+      name: 'single',
+      component: single,
     },
     {
       path: '/about',

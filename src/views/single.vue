@@ -1,23 +1,24 @@
 <template>
   <div class="single">
-  <h1>Single article</h1>
-
-
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi illo porro, tempore nam consequuntur fuga eligendi sint nostrum animi consequatur quaerat deserunt laborum non impedit, ad numquam quam veniam quisquam.
-  Consequuntur, fugiat blanditiis omnis vero quae enim quidem praesentium, ullam, saepe voluptatibus libero incidunt suscipit! Quis corporis, facilis repudiandae rem tempore tenetur necessitatibus eligendi deserunt, dicta veniam dolores alias repellat.
-  Officia eaque esse mollitia ipsam est eos rerum, minima nostrum voluptatem ratione recusandae ea eius maiores molestiae magnam consequuntur porro sunt, quia non perferendis harum? Odio quas saepe in deleniti?
-
-
-
-  Nulla obcaecati facere reprehenderit, magnam officia autem reiciendis exercitationem animi blanditiis officiis voluptatum veniam quasi vitae? Tempore sint, sed ipsa eos ex itaque, dignissimos debitis similique atque ut earum fugiat.
-  Facere quod voluptate earum accusantium debitis! Voluptates, veritatis amet. Voluptatem reprehenderit veritatis aspernatur, impedit error ipsa molestias optio excepturi saepe assumenda, ea id quas voluptate distinctio quibusdam ipsam animi maiores?</p>
+    <h1>{{json[grab-1].header}}</h1>
+    <p><strong>WRITTEN BY: </strong>{{json[grab-1].author}}</p>
+    <em>{{json[grab-1].date}}</em>
+    <img :src="json[grab-1].picture" style="width:200px; height:auto; float:right"><p v-show="grab" v-if="json[grab-1].info">{{json[grab-1].info}}</p>
   </div>
 </template>
 
 <script>
 import json from '@/assets/article-date.json'
 export default {
-  name: 'single'
+  name: 'single',
+  data () {
+    return {
+      json: json,
+      grab: function () {
+        return window.location.href.substr(window.location.href.lastIndexOf('/') + 1);
+      }()
+    }
+  }
 }
 </script>
 
