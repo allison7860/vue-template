@@ -40,8 +40,7 @@ export default {
             {
                 name: 'contact', 
                 sub: [{id: 1, name: 'mail', href: '/contact'},
-                {id: 2, name: 'faq', href: '/faq'}, 
-                {id: 3, name: 'submit', href: '/submit'}], 
+                {id: 2, name: 'faq', href: '/faq'}], 
                 active:false
             },
         ]

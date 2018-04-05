@@ -3,7 +3,10 @@
     <div class="sidebar">
       <ul>
         <li v-for="x in json">
-          <router-link v-for="s in x.tags" @click.native="cat(s)" :to="{name: 'tag', params: {tag: s}}">{{s}}</router-link>
+          <router-link 
+          v-for="s in x.tags" 
+          @click.native="cat(s)" 
+          :to="{name: 'tag', params: {tag: s}}">{{s}}</router-link>
         </li>
       </ul>
     </div>
@@ -11,7 +14,9 @@
       <div class="article-header">
         <h1 class="header1">Articles</h1>
       </div>
-      <div class="card" v-for="x in json" v-if="x.active == true">
+      <div class="card" 
+      v-for="x in json" 
+      v-if="x.active == true">
         <p class="header-date">{{x.date}}</p>
         <div class="photo" v-bind:style="{backgroundImage: 'url(' + x.picture + ')' }">
           <router-link :to="{name: 'single', params: {id: x.id}}"></router-link>

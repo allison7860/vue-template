@@ -2,13 +2,20 @@
   <div class="faq">
 
     <div class="search">
-        <input id="search" v-model="msg"  v-on:keyup="checkSearch(msg)" @focus="checkSearch(msg)" type="text" placeholder="search questions">
+        <input id="search" 
+        v-model="msg"  
+        v-on:keyup="checkSearch(msg)" 
+        @focus="checkSearch(msg)" 
+        type="text" 
+        placeholder="search questions">
     </div>
 
 
 
   <h1>Fking Answers & Questions?!</h1>
-    <div class="box" v-for="item in faq" v-if="item.active == true"> 
+    <div class="box" 
+    v-for="item in faq" 
+    v-if="item.active == true"> 
         <h3>{{item.question}}</h3>
         <p>{{item.answer}}</p>
     </div>
@@ -32,23 +39,23 @@ export default {
   },
   methods: {
     checkSearch: function (msg) {
-            msg = msg.toLowerCase();
+        msg = msg.toLowerCase();
 
-            for ( var x = 0; x < this.faq.length; x++ ){ 
-                if ( this.faq[x].question.indexOf(msg) > -1) {
-                this.faq[x].active = !this.faq[x].active;
-                } else  {
-                    this.faq[x].active = false;
-                }
+        for ( var x = 0; x < this.faq.length; x++ ){ 
+            if ( this.faq[x].question.indexOf(msg) > -1) {
+            this.faq[x].active = !this.faq[x].active;
+            } else  {
+                this.faq[x].active = false;
             }
         }
+    }
   },
   beforeMount() {
-      for ( var x = 0; x <= this.faq.length; x++ ) {
+    for ( var x = 0; x <= this.faq.length; x++ ) {
         if ( this.faq[x].active == false) {
             this.faq[x].active = true;
         }
-      }
+    }
   }
 }
 
