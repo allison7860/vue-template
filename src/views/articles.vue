@@ -23,7 +23,7 @@
         </div>
         <div class="info">
           <h3 class="card-header">{{x.header}}</h3>
-          <p>{{x.info}}</p>
+          <p>{{x.info.slice(0, 100)}}...</p>
         </div>
       </div>
     </div>
@@ -47,27 +47,23 @@ export default {
         for ( var s = 0; s < json[d].tags.length; s++ ) {
           // Tags inside json data
           if ( json[d].tags[s] == x ) {
-            // alert(json[d])
             json[d].active = !json[d].active;
-
           }
+
+          // Remove duplicates here...
+          
+
+
+
+
         }
       }
     }
   },
   beforeMount() {
-
     for ( var x = 0; x < json.length; x++ ) {
       if ( json[x].active == false) {
         json[x].active = true;
-      }
-      for ( var a = 0; a < json[x].tags.length; a++) {
-        // alert(json[x].tags[a]);
-        if ( json[x].tags[a] == json[x].tags[a]) {
-          // get rid of duplicates here...
-          // alert('duplicate')
-        }
-
       }
     }
   }
