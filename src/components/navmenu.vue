@@ -112,6 +112,7 @@ ul li a {
     color:#00f;
     text-decoration:none;
 }
+ul li a:active {
     color:#fff;
 }
 ul ul {
