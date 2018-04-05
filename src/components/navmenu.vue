@@ -100,6 +100,7 @@ export default {
 ul {
     list-style:none;
     margin:0;
+    font-size:16pt;
     padding:0;
     position:relative;
 }
@@ -111,10 +112,12 @@ ul li a {
     color:#00f;
     text-decoration:none;
 }
+    color:#fff;
+}
 ul ul {
     position:absolute;
     margin-top:10px;
-    background:#ee0;
+    background:#00e;
     margin-left:-20px;
 }
 ul ul li {
@@ -123,6 +126,7 @@ ul ul li {
     min-width:90px;
 }
 ul ul li a {
+    color:#fff;
     display:block;
     padding:5px;
 }

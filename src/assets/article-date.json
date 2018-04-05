@@ -42,5 +42,21 @@
             "Modern History"
         ],
         "active": false
+    },
+
+    {
+        "id": 4,
+        "name": "Title of Article 4",
+        "author": "Allison Powell",
+        "picture": "https://78.media.tumblr.com/9d6322067cb6045f9b9254ab79320fbb/tumblr_p4dxwpS5G01v3lyl7o1_1280.jpg",
+        "header": "Article 4",
+        "info": "I never spend much time in school but I taught ladies plenty. It's true I hire my body out for pay, hey hey. I've gotten burned over Cheryl Tiegs, blown up for Raquel Welch. But when I end up in the hay it's only hay, hey hey. I might jump an open drawbridge, or Tarzan from a vine. 'Cause I'm the unknown stuntman that makes Eastwood look so fine. Ten years ago a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a problem and no one else can help, and if you can find them, maybe you can hire the A-team. Thunder, thunder, thundercats, Ho! Thundercats are on the move, Thundercats are loose. Feel the magic, hear the roar, Thundercats are loose. Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thunder, thunder, thunder, Thundercats! Thundercats!",
+        "date": "03/29/2017",
+        "tags": [
+            "Academic History",
+            "Ancient History",
+            "Modern History"
+        ],
+        "active": false
     }
 ]
