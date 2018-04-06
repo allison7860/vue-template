@@ -40,13 +40,15 @@ export default {
   display:flex;
   display:-ms-flex;
   justify-content:center;
-  align-items:center;
+  align-items:stretch;
 }
 .sidebar, .article {
   margin:5px;
+  padding:5px;
 }
 .sidebar {
   width:30%;
+  background:#eee;
 }
 .article {
   width:70%;

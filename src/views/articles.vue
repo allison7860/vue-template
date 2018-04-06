@@ -80,11 +80,12 @@ img {
   display:flex;
   display:-ms-flex;
   align-items: flex-start;
+  justify-content:space-between;
 }
 .sidebar {
   background:#2d2d2d;
   border-radius:10px;
-  min-width:200px;
+  min-width:250px;
 }
 
 .card-container {
@@ -182,8 +183,9 @@ img {
 .sidebar ul li {
   display:inline-block;
 }
-.sidebar ul li a{
-  font-size:10pt;
+.sidebar ul li a {
+  word-break:break-all;
+  font-size:8pt;
   background:#eee;
   padding:2px;
   margin:2px;

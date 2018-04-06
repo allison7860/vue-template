@@ -40,7 +40,9 @@ input,textarea {
 }
 input, textarea {
     padding:10px;
-    background:#00ee90;
+    background:#2d2d2d;
+    color:#fff;
+    font-size:15pt;
 }
 textarea {
     height:200px;

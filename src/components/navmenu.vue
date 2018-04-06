@@ -117,22 +117,27 @@ ul li a:active {
 }
 ul ul {
     position:absolute;
-    margin-top:10px;
-    background:#00e;
-    margin-left:-20px;
+    background:#2d2d2d;
+    margin:21px 0 0 -20px;
+    font-size:13pt;
 }
 ul ul li {
     margin:0;
     display:block;
-    min-width:90px;
+    border-bottom:2px solid #00e;
+    min-width:120px;
+    transition:.2s ease-in;
+}
+ul ul li:last-child {
+    border-bottom:none;
+}
+ul ul li:hover {
+    background:#00e;
 }
 ul ul li a {
     color:#fff;
     display:block;
     padding:5px;
 }
-.arrow {
-    height:10px;
-    background:#eee;
-}
+
 </style>

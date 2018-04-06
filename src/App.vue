@@ -46,5 +46,12 @@ a:hover {
   min-height:600px;
 
 }
+@media ( max-width: 900px ) {
+  #wrapper {
+    margin: 20px auto;
+    max-width:100%;
+    padding:5px
+  }
+}
 
 </style>
