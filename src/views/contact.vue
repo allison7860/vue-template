@@ -10,7 +10,7 @@
         <input type="email" name="email">
         <label for="msg">Message:</label>
         <textarea name="msg"></textarea>
-        <input type="submit" name="submit">
+        <input type="submit" name="submit" value="Submit">
      </form>
 
   </div>

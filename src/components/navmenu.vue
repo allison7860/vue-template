@@ -4,6 +4,7 @@
         <h1><router-link :to="{name: 'comp1'}">RetroSpec</router-link></h1>
     </div>
     <div class="menu">
+    <div class="hidden" @click=""></div>
         <ul>
             <li v-for="(item,index) in menuList"><a @click.prevent="toggle(index, item)" href="#">{{item.name}} 
             <!--{{item.active}}-->
@@ -140,4 +141,26 @@ ul ul li a {
     padding:5px;
 }
 
+@media (max-width:900px ) {
+    .logo h1 a {
+        font-size:20pt;
+        padding:10px;
+    }
+    ul {
+        display:none;
+    }
+    .hidden {display:block; height:auto;
+     width:auto;
+     color:#ee0;
+     background:#2d2d2d;
+     position:fixed; top:20px;
+     right:0;
+     padding:5px 10px 5px 5px;
+     cursor:pointer;
+
+     }
+     .hidden::after {
+         content:'menu';
+     }
+}
 </style>

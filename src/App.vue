@@ -50,7 +50,7 @@ a:hover {
   #wrapper {
     margin: 20px auto;
     max-width:100%;
-    padding:5px
+    padding:5px;
   }
 }
 
