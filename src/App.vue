@@ -31,6 +31,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   line-height:165%;
+  font-size:13pt;
+}
+h1,h2,h3,h4,h5,h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+  color:#00e;
+  font-weight:normal;
 }
 a {
     color:#eee;
@@ -45,6 +50,11 @@ a:hover {
   max-width:80%;
   min-height:600px;
 
+}
+textarea {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 @media ( max-width: 900px ) {
   #wrapper {

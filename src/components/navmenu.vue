@@ -90,6 +90,7 @@ export default {
 }
 .logo h1 a{
     padding:20px;
+    font-weight:bold !important;
     text-align:right;
     margin:0;
     color:#2d2d2d;

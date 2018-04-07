@@ -18,7 +18,28 @@
 
   Nulla obcaecati facere reprehenderit, magnam officia autem reiciendis exercitationem animi blanditiis officiis voluptatum veniam quasi vitae? Tempore sint, sed ipsa eos ex itaque, dignissimos debitis similique atque ut earum fugiat.
   Facere quod voluptate earum accusantium debitis! Voluptates, veritatis amet. Voluptatem reprehenderit veritatis aspernatur, impedit error ipsa molestias optio excepturi saepe assumenda, ea id quas voluptate distinctio quibusdam ipsam animi maiores?</p>
+  
+  
+  <form>
+    <label for="author">Author:</label>
+    <input type="text">
+    <label for="title">Title:</label>
+    <input type="text">
+    <label for="website">Website:</label>
+    <input type="text">
+    <label for="email">E-mail:</label>
+    <input type="email">
+    <label for="story">Story:</label>
+    <textarea></textarea>
+    <input type="submit" value="Send Story">
+  </form>
+
   </div>
+
+
+
+
+
 </template>
 
 <script>
@@ -27,6 +48,33 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+form {
+  max-width:900px;
+  margin:0 auto;
+  padding:10px 20px;
+}
+label, input, textarea {
+  display:block;
+  border:none;
+  width:100%;
+}
+input,textarea {
+  padding:10px;
+  background:#2d2d2d;
+  color:#fff;
+  font-size:15pt;
+  box-shadow:0 0 5px #000;
+  margin-bottom:10px;
+}
+textarea {
+    height:200px;
+}
+input[type=submit] {
+  cursor:pointer;
+  width:auto !important;
+  margin:0 auto;
+}
 
 </style>

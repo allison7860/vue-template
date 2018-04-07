@@ -2,10 +2,17 @@
   <div class="comp1">
     
     <div class="sidebar">
-      <h2>Join the History Adventures!</h2>
-      <router-link class="contribute" :to="{name: 'post'}">Contribute Anytime!</router-link>
+      <div class="join">
+        <h2>Join the Historic Adventures!</h2>
+        <router-link class="contribute" :to="{name: 'post'}">Contribute!</router-link>
+      </div>
+      <div class="recent">
+      <h2>Recent Posts <span class="more"><router-link :to="{name: 'articles'}">&hearts;</router-link></span></h2>
+        <ul>
+          <li v-for="x in json"><router-link class="title" :to="{name: 'single', params: {id: x.id}}">{{x.header}} <span class="date">{{x.date}}</span></router-link></li>
+        </ul>
+      </div>
     </div>
-
     <div class="article">
     <h1>Do you enjoy writing?</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, amet dolore eaque iste odio quidem corporis officia accusantium a maiores dignissimos? Ratione ut magnam accusantium rem laboriosam iusto quos repellendus. Eos repudiandae laudantium ipsam deserunt qui blanditiis voluptatibus maiores atque! Fugit animi dolorum harum nulla voluptatem quod amet minima quis. Pariatur quibusdam similique autem debitis dicta quo possimus quaerat excepturi!
@@ -24,10 +31,12 @@
 </template>
 
 <script>
+import json from '@/assets/article-date.json'
 export default {
   name: 'comp1',
   data () {
     return {
+      json:json
     }
   }
 }
@@ -44,17 +53,18 @@ export default {
 }
 .sidebar, .article {
   margin:5px;
-  padding:5px;
+  padding:10px;
 }
 .sidebar {
   width:30%;
   background:#eee;
+  display:flex;
+  display:-ms-flex;
+  flex-flow:column;
 }
+.
 .article {
   width:70%;
-}
-h1, h2 {
-  font-weight: normal;
 }
 ul {
   list-style-type: none;
@@ -67,12 +77,25 @@ li {
 a {
   color: #42b983;
 }
-
+.title {
+  position:relative;
+  font-weight:bold;
+}
+.date {
+  font-size:9pt;
+}
+.recent h2 {
+  position:relative;
+}
+.more {
+  position:absolute;
+  right:0;
+}
 .contribute {
   background:#2d2d2d;
   display:table;
   margin:0 auto;
-  padding:20px;
+  padding:10px;
   color:yellow;
   border-radius:10px;
   font-size:15pt;
