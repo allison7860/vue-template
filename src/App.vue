@@ -26,6 +26,7 @@ export default {
 }
 body {
   background:#f0ebe6;
+  background:url('http://allison.allisonshtml.com/img/b21tabus1567.png');
   margin:0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
