@@ -7,7 +7,7 @@
         <router-link class="contribute" :to="{name: 'post'}">Contribute!</router-link>
       </div>
       <div class="col recent">
-        <h2>Recent Posts <span class="more"><router-link :to="{name: 'articles'}"></router-link></span></h2>
+        <h2>Recent Posts <span class="more" alt="View All" ><router-link title="View All" :to="{name: 'articles'}"></router-link></span></h2>
         <ul>
           <li v-for="x in json"><router-link class="title" :to="{name: 'single', params: {id: x.id}}">{{x.header}} <span class="date">{{x.date}}</span></router-link></li>
         </ul>
@@ -102,12 +102,20 @@ a {
   width: 46px;
   background: url('https://vectr.com/allison7860/chFKbVOTs.svg?width=72&height=76&select=chFKbVOTspage0') 0 0 / 70% 100% no-repeat;
 }
+.more > a {
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+
+}
 .contribute {
-  background: #b09893;
+  background: #2d2d2d;
   display: table;
   margin: 0 auto;
   padding: 10px;
-  color:#2d2d2d;
+  color:#b09893;
   border-radius:10px;
   font-size:15pt;
 }
