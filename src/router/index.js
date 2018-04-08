@@ -8,6 +8,7 @@ import post from '@/views/post'
 import contact from '@/views/contact'
 import single from '@/views/single'
 import faq from '@/views/faq'
+import you from '@/views/you'
 
 
 Vue.use(Router)
@@ -27,14 +28,14 @@ export default new Router({
       component: articles,
       children: [
         {
-          path: 'tag/:tag',
+          path: '/tag/:tag',
           name: 'tag',
           component: tag,
         }
       ]
     },
     {
-      path: 'single/:id',
+      path: '/single/:id',
       name: 'single',
       component: single,
     },
@@ -57,6 +58,11 @@ export default new Router({
       path: '/faq',
       name: 'faq',
       component: faq
+    },
+    {
+      path: '/you',
+      name: 'you',
+      component: you
     }
   ]
 })

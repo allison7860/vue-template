@@ -51,12 +51,17 @@ export default {
           }
 
           // Remove duplicates here...
-          
-
-
-
-
+        
         }
+
+          // unqie = json[d].tags.reduce(function ( item, pos) {
+          //   if (item.indexOf(pos) < 0 ) item.push(pos);
+          //   return item;
+          // });
+
+
+
+
       }
     }
   },

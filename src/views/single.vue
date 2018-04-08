@@ -22,6 +22,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
+
+@media ( max-width: 900px ) {
+  img {
+    float:none !important;
+    display:block;
+    margin:10px auto;
+  }
+}
 </style>

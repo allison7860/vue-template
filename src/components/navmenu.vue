@@ -29,13 +29,13 @@ export default {
             {
                 name: 'articles', 
                 sub: [{id: 1, name: 'read', href: '/articles'},
-                      {id: 2, name: 'post', href: 'post'}],
+                      {id: 2, name: 'post', href: '/post'}],
                 active:false
              },
             {
                 name: 'about', 
                 sub: [{id: 1, name: 'what is this?', href:'/about'}, 
-                      {id: 2, name: 'for you', href:'you'}], 
+                      {id: 2, name: 'for you', href:'/you'}], 
                       active:false
             },
             {
@@ -85,15 +85,16 @@ export default {
     align-items: center;
     box-shadow: 0 0 29px #000;
 }
+/* tumblr https://78.media.tumblr.com/0e78b64e4a9b5ed18708fb339f20ce6e/tumblr_p61fdwatzX1skhm00o1_1280.jpg */
 .logo {
-    background:#00f;
+    background:url('https://78.media.tumblr.com/0e78b64e4a9b5ed18708fb339f20ce6e/tumblr_p61fdwatzX1skhm00o1_1280.jpg') 100% 50% / cover no-repeat;
 }
 .logo h1 a{
     padding:20px;
     font-weight:bold !important;
     text-align:right;
     margin:0;
-    color:#2d2d2d;
+    color:#ee0;
     text-transform:uppercase;
 }
 .menu {
