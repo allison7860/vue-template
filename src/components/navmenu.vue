@@ -4,7 +4,16 @@
         <h1><router-link :to="{name: 'comp1'}">RetroSpec</router-link></h1>
     </div>
     <div class="menu">
-    <div class="hidden" @click=""></div>
+    <div class="hidden" @click="show = !show">
+        <div v-show="show" class="hidden-menu">
+        <span class="hidden-items" v-for="(item, index) in menuList">
+            <a @click="toggle(index, item)" href="#">{{item.name}}</a></span>
+    
+        
+        
+        
+        </div>
+    </div>
         <ul>
             <li v-for="(item,index) in menuList"><a @click.prevent="toggle(index, item)" href="#">{{item.name}} 
             <!--{{item.active}}-->
@@ -25,6 +34,7 @@ export default {
   name: 'navmenu',
   data () {
     return {
+        show:false,
         menuList: [
             {
                 name: 'articles', 
@@ -142,6 +152,9 @@ ul ul li a {
     display:block;
     padding:5px;
 }
+.hidden {
+    display:none;
+}
 
 @media (max-width:900px ) {
     .logo h1 a {
@@ -155,14 +168,36 @@ ul ul li a {
      width:auto;
      color:#ee0;
      background:#2d2d2d;
-     position:fixed; top:20px;
+     position:fixed; 
+     top:20px;
      right:0;
-     padding:5px 10px 5px 5px;
+     padding:5px 5px 5px 10px;
      cursor:pointer;
+     z-index:100;
 
      }
      .hidden::after {
          content:'menu';
+     }
+
+     .hidden-menu {
+            position:fixed;
+            overflow:auto;
+            width:100%;
+            background:#fff;
+            z-index:99;
+            left:0;
+            top:75px;
+     }
+     .hidden-items a {
+         color:#2d2d2d;
+         display:block;
+         text-align:right;
+         transition:.2s ease-in;
+         padding-right:5px;
+     }
+     .hidden-items a:hover {
+         background:#ee0;
      }
 }
 </style>

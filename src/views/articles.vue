@@ -1,6 +1,7 @@
 <template>
   <div class="article">
     <div class="sidebar">
+    <h4>Tags</h4>
       <ul>
         <li v-for="x in json">
           <router-link 
@@ -89,6 +90,10 @@ img {
 }
 .sidebar {
   min-width:250px;
+}
+.sidebar h4 {
+  padding:0; 
+  margin:0;
 }
 
 .card-container {
@@ -196,6 +201,18 @@ img {
   color:#00e;
   border-radius:5px;
 
+}
+
+@media ( max-width:900px ) {
+  .article {
+    display:block;
+  }
+  .sidebar ul {
+      max-width:100%;
+  }
+  .sidebar, .card-container {
+    width:100%;
+  }
 }
 
 
