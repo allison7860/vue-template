@@ -5,8 +5,8 @@
         <input id="search" 
         v-model="msg"  
         v-on:keyup="checkSearch(msg)" 
-        @focus="checkSearch(msg)" 
-        type="text" 
+        @focus="checkSearch(msg)"
+        type="text"
         placeholder="search questions">
     </div>
 
@@ -67,10 +67,11 @@ export default {
 #search {
     display:block;
     margin:0 auto;
-    background:#00e;
-    color:#fff;
+    background:#e4d638;
+    color:#2d2d2d;
     font-size:16pt;
     padding:5px;
     border:none;
 }
+
 </style>

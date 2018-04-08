@@ -7,11 +7,17 @@
         <router-link class="contribute" :to="{name: 'post'}">Contribute!</router-link>
       </div>
       <div class="col recent">
-      <h2>Recent Posts <span class="more"><router-link :to="{name: 'articles'}">&hearts;</router-link></span></h2>
+        <h2>Recent Posts <span class="more"><router-link :to="{name: 'articles'}"></router-link></span></h2>
         <ul>
           <li v-for="x in json"><router-link class="title" :to="{name: 'single', params: {id: x.id}}">{{x.header}} <span class="date">{{x.date}}</span></router-link></li>
         </ul>
       </div>
+
+    <div class="col today">
+      <h2>History for Today</h2>
+        <p>There is history in the making right at this moment! Besides all policitial takes, there is <strong>science</strong>, <strong>new discoveries</strong>, <strong>space exploration</strong>, and lots more!</p>
+    </div>
+
     </div>
     <div class="article">
     <h1>Do you enjoy writing?</h1>
@@ -77,7 +83,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #b09893;
 }
 .title {
   position:relative;
@@ -90,14 +96,17 @@ a {
   position:relative;
 }
 .more {
-  position:absolute;
-  right:0;
+  position: absolute;
+  right: 0;
+  height: 30px;
+  width: 46px;
+  background: url('https://vectr.com/allison7860/chFKbVOTs.svg?width=72&height=76&select=chFKbVOTspage0') 0 0 / 70% 100% no-repeat;
 }
 .contribute {
-  background:#fff;
-  display:table;
-  margin:0 auto;
-  padding:10px;
+  background: #b09893;
+  display: table;
+  margin: 0 auto;
+  padding: 10px;
   color:#2d2d2d;
   border-radius:10px;
   font-size:15pt;
@@ -108,6 +117,7 @@ a {
   }
   .sidebar, .article {
     width:100%;
+    margin:0;
   }
 }
 </style> 

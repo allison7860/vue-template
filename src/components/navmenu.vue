@@ -4,24 +4,23 @@
         <h1><router-link :to="{name: 'comp1'}">RetroSpec</router-link></h1>
     </div>
     <div class="menu">
-    <div class="hidden" @click="show = !show">
-        <div v-show="show" class="hidden-menu">
-        <span class="hidden-items" v-for="(item, index) in menuList">
-            <a @click="toggle(index, item)" href="#">{{item.name}}</a></span>
-    
-        
-        
-        
+        <div class="hidden" @click="show = !show">
+            <div v-show="show" class="hidden-menu">
+                <span class="hidden-items" v-for="(item, index) in menuList">
+
+                    <router-link v-for="y in item.sub" :to="y.href">{{y.name}}</router-link>
+                    <!-- <a @click="toggle(index, item)" href="#">{{item.name}}</a> -->
+                </span>
+            </div>
         </div>
-    </div>
         <ul>
-            <li v-for="(item,index) in menuList"><a @click.prevent="toggle(index, item)" href="#">{{item.name}} 
-            <!--{{item.active}}-->
-            </a>
+            <li v-for="(item,index) in menuList"><a @click.prevent="toggle(index, item)" href="#">{{item.name}}</a>
 
                 <ul v-show="menuList[index].active" @mouseleave="mouseOver">
-                <div class="arrow"></div>
-                    <li v-for="y in item.sub"><router-link :to="y.href">{{y.name}}</router-link></li>
+                    <div class="arrow"></div>
+                    <li v-for="y in item.sub">
+                        <router-link :to="y.href">{{y.name}}</router-link>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -94,6 +93,8 @@ export default {
     display:-ms-flex;
     align-items: center;
     box-shadow: 0 0 20px #888;
+    z-index:9999;
+    position:relative;
 }
 /* tumblr https://78.media.tumblr.com/0e78b64e4a9b5ed18708fb339f20ce6e/tumblr_p61fdwatzX1skhm00o1_1280.jpg */
 .logo {
@@ -171,16 +172,19 @@ ul ul li a {
     ul {
         display:none;
     }
-    .hidden {display:block; height:auto;
-     width:auto;
-     color:#ee0;
-     background:#2d2d2d;
-     position:fixed; 
-     top:20px;
-     right:0;
-     padding:5px 5px 5px 10px;
-     cursor:pointer;
-     z-index:100;
+    .hidden {
+        display:block; 
+        height:auto;
+        width:auto;
+        color:#b09893;
+        background:#2d2d2d;
+        position:fixed; 
+        font-weight:bold;
+        top:18px;
+        right:0;
+        padding:5px 5px 5px 10px;
+        cursor:pointer;
+        z-index:100;
 
      }
      .hidden::after {
@@ -191,20 +195,20 @@ ul ul li a {
             position:fixed;
             overflow:auto;
             width:100%;
-            background:#fff;
+            background:#2d2d2d;
             z-index:99;
             left:0;
-            top:75px;
+            top:70px;
      }
      .hidden-items a {
-         color:#2d2d2d;
+         color:#b09893;
          display:block;
          text-align:right;
          transition:.2s ease-in;
          padding-right:5px;
      }
      .hidden-items a:hover {
-         background:#ee0;
+         background:#e4d638;
      }
 }
 </style>

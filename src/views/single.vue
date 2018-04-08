@@ -24,6 +24,11 @@ export default {
 
 <style scoped>
 
+img {
+  box-shadow: 0 0 0 2px #a9a9a9;
+  margin:10px;
+  border-image:url('https://vectr.com/allison7860/f6xJ6MDRc.svg?width=362&height=522&select=f6xJ6MDRcpage0') 20 fill / 10px / 25px round;
+}
 
 @media ( max-width: 900px ) {
   img {

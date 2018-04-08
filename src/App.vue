@@ -59,6 +59,9 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 }
 @media ( max-width: 900px ) {
+  body {
+    font-size:12pt;
+  }
   #wrapper {
     margin: 20px auto;
     max-width:100%;
