@@ -25,6 +25,7 @@ export default {
   box-sizing:border-box;
 }
 body {
+  background:#f0ebe6;
   margin:0;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,7 +35,7 @@ body {
   font-size:13pt;
 }
 h1,h2,h3,h4,h5,h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-  color:#00e;
+  color:#2d2d2d;
   font-weight:normal;
 }
 a {
@@ -46,7 +47,7 @@ a:hover {
     color:#eee;
 }
 #wrapper {
-  margin:40px auto;
+  margin:4em auto;
   max-width:80%;
   min-height:600px;
 

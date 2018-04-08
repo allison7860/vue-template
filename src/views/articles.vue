@@ -105,14 +105,15 @@ img {
   width:90%;
 }
 .card {
+  background:#fff;
   width:250px;
   border-radius:10px;
   border:2px solid #fff;
   box-shadow:0 0 10px #ddd;
+  padding:5px;
 }
 .photo, .info {
   display:block;
-  margin:5px;
 }
 .photo {
   min-height:200px;
@@ -163,7 +164,7 @@ img {
 }
 
 .article-header {
-  background:#00e;
+  background:#b09893;
   flex: 0 0 100%;
   overflow:auto;
   width:100%;
@@ -195,10 +196,10 @@ img {
 .sidebar ul li a {
   word-break:break-all;
   font-size:8pt;
-  background:#eee;
+  background:#b09893;
   padding:2px;
   margin:2px;
-  color:#00e;
+  color:#fff;
   border-radius:5px;
 
 }

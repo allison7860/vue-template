@@ -45,7 +45,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .comp1 {
-  padding:10px;
   display:flex;
   display:-ms-flex;
   justify-content:center;
@@ -62,7 +61,7 @@ export default {
   flex-flow:column;
 }
 .col {
-    background:#eee;
+    background:#fff;
     margin-bottom:10px;
     padding:10px;
 }
@@ -95,11 +94,11 @@ a {
   right:0;
 }
 .contribute {
-  background:#2d2d2d;
+  background:#fff;
   display:table;
   margin:0 auto;
   padding:10px;
-  color:yellow;
+  color:#2d2d2d;
   border-radius:10px;
   font-size:15pt;
 }

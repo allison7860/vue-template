@@ -93,20 +93,27 @@ export default {
     display:flex;
     display:-ms-flex;
     align-items: center;
-    box-shadow: 0 0 29px #000;
+    box-shadow: 0 0 20px #888;
 }
 /* tumblr https://78.media.tumblr.com/0e78b64e4a9b5ed18708fb339f20ce6e/tumblr_p61fdwatzX1skhm00o1_1280.jpg */
 .logo {
-    background:url('https://78.media.tumblr.com/0e78b64e4a9b5ed18708fb339f20ce6e/tumblr_p61fdwatzX1skhm00o1_1280.jpg') 100% 50% / cover no-repeat;
+    background:url('https://78.media.tumblr.com/1d67f85c985f623d81fdf2e11b16836a/tumblr_p4pqscEyVt1svtyqco1_1280.jpg') 100% 90% / cover no-repeat;
+    transition:.5s ease-in;
 }
 .logo h1 a{
     padding:20px;
     font-weight:bold !important;
     text-align:right;
     margin:0;
-    color:#ee0;
+    color:#e4d638;
     text-transform:uppercase;
 }
+
+.logo:hover {
+    background-position:100% 80%;
+}
+
+
 .menu {
     
 }
@@ -122,7 +129,7 @@ ul li {
     margin-left:40px;
 }
 ul li a {
-    color:#00f;
+    color:#b09893;
     text-decoration:none;
 }
 ul li a:active {
@@ -137,7 +144,7 @@ ul ul {
 ul ul li {
     margin:0;
     display:block;
-    border-bottom:2px solid #00e;
+    border-bottom:1px solid #e4d638;
     min-width:120px;
     transition:.2s ease-in;
 }
@@ -145,10 +152,10 @@ ul ul li:last-child {
     border-bottom:none;
 }
 ul ul li:hover {
-    background:#00e;
+    background:#333;
 }
 ul ul li a {
-    color:#fff;
+    color:#b09893;
     display:block;
     padding:5px;
 }
