@@ -83,8 +83,6 @@ img {
   justify-content:space-between;
 }
 .sidebar {
-  background:#2d2d2d;
-  border-radius:10px;
   min-width:250px;
 }
 
@@ -94,6 +92,7 @@ img {
   justify-content:space-around;
   margin:0 auto;
   flex-flow: row wrap;
+  width:90%;
 }
 .card {
   width:250px;
