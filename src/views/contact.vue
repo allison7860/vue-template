@@ -81,4 +81,23 @@ input[type=submit]:focus {
 input:focus, textarea:focus {
     border-bottom:1px solid #fff;
 }
-</style>
+
+@media ( max-width:900px ) {
+    .contact-container {
+        display:block;
+        background:transparent;
+    }
+    #contactForm {
+        min-width:100%;
+        background:#b09893;
+        padding:5px;
+    }
+    .background {
+        height:180px;
+        background-position:80% 0; 
+    }
+    .form {
+        width:100%;
+    }
+}
+</style> 
