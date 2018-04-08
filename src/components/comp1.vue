@@ -2,11 +2,11 @@
   <div class="comp1">
     
     <div class="sidebar">
-      <div class="join">
+      <div class="col join">
         <h2>Join the Historic Adventures!</h2>
         <router-link class="contribute" :to="{name: 'post'}">Contribute!</router-link>
       </div>
-      <div class="recent">
+      <div class="col recent">
       <h2>Recent Posts <span class="more"><router-link :to="{name: 'articles'}">&hearts;</router-link></span></h2>
         <ul>
           <li v-for="x in json"><router-link class="title" :to="{name: 'single', params: {id: x.id}}">{{x.header}} <span class="date">{{x.date}}</span></router-link></li>
@@ -57,12 +57,15 @@ export default {
 }
 .sidebar {
   width:30%;
-  background:#eee;
   display:flex;
   display:-ms-flex;
   flex-flow:column;
 }
-.
+.col {
+    background:#eee;
+    margin-bottom:10px;
+    padding:10px;
+}
 .article {
   width:70%;
 }
@@ -71,7 +74,7 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 a {
